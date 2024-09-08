@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - The Greatest Footballer of ALL Time</title>
+    <style>
+      /* General Body Styles */
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        color: #fff;
+      }
+
+      /* Large Heading */
+      .large-heading {
+        font-family: "Poppins", sans-serif;
+        font-size: 3.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+        color: #fff;
+        background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Gallery Styles */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        margin-top: 20px;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      .gallery-item {
+        position: relative;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        display: block;
+        transition: opacity 0.3s ease;
+      }
+
+      .gallery-item:hover img {
+        opacity: 0.7;
+      }
+
+      .gallery-item .description {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        transform: translateY(100%);
+      }
+
+      .gallery-item:hover .description {
+        transform: translateY(0);
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="large-heading">Gallery of Lionel Messi</h1>
+    </header>
+    <main>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="messi6lpg.jpeg" alt="Lionel Messi 6" />
+          <div class="description">
+            Lionel Messi celebrates a memorable goal.
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="messi7jpg.jpeg" alt="Lionel Messi 7" />
+          <div class="description">
+            Messi showing off his skills on the field.
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="messi8jpg.jpg" alt="Lionel Messi 8" />
+          <div class="description">An intense moment during a match.</div>
+        </div>
+        <div class="gallery-item">
+          <img src="messi9jpg.jpg" alt="Lionel Messi 9" />
+          <div class="description">Messi with his iconic celebration.</div>
+        </div>
+        <div class="gallery-item">
+          <img src="messi10jkpg.jpg" alt="Lionel Messi 10" />
+          <div class="description">A stunning portrait of Messi in action.</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

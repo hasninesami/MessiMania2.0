@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Greatest Footballer of ALL Time</title>
+  </head>
+  <link rel="stylesheet" href="styles.css" />
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Messi</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+      </ul>
+    </nav>
+    <h1 class="large-heading">The History of Lionel Messi</h1>
+
+    <a
+      href="https://youtube.com/shorts/V90m6UUa10g?si=Zy3fvd9PMNMpdK4P"
+      class="video-link"
+      target="_blank"
+      >Watch the Video on our Youtube Channel</a
+    >
+
+    <div class="description">
+      <p>
+        Lionel Messi is widely regarded as one of the greatest footballers of
+        all time. Known for his exceptional dribbling skills, vision, and
+        ability to score from almost any position on the pitch, Messi has set
+        numerous records throughout his career. His journey from a young talent
+        at FC Barcelona to becoming a global football icon is nothing short of
+        extraordinary.
+      </p>
+      <p>
+        Over his career, Messi has won numerous individual awards, including
+        multiple Ballon d'Or titles, which recognize him as the best player in
+        the world. His consistency, versatility, and dedication have made him a
+        beloved figure in the football community, admired by fans and peers
+        alike. His influence extends beyond the pitch, inspiring millions of
+        aspiring footballers around the world.
+      </p>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="messi.jpeg" alt="Lionel Messi" />
+      </div>
+      <div class="gallery-item">
+        <img src="messi2.jpg" alt="Messi holding Ballon d'Or" />
+      </div>
+      <div class="gallery-item">
+        <img src="messi3.jpg" alt="Messi in action" />
+      </div>
+      <div class="gallery-item">
+        <img src="messi4.jpg" alt="Messi with teammates" />
+      </div>
+      <div class="gallery-item">
+        <img src="messi5.webp" alt="Messi in Argentina jersey" />
+      </div>
+    </div>
+
+    <div class="button-container">
+      <a
+        href="https://youtube.com/@shortsbeingshorts?si=JOJTUBunePCrmJ4J"
+        class="channel-button subscribe"
+        target="_blank"
+        >Subscribe to Our Channel</a
+      >
+      <a href="#quiz" class="channel-button">Take the Messi Quiz</a>
+    </div>
+
+    <div class="achievements">
+      <h2>Achievements</h2>
+      <ul>
+        <li>7x Ballon d'Or Winner</li>
+        <li>4x UEFA Champions League Winner</li>
+        <li>10x La Liga Champion</li>
+        <li>6x European Golden Shoe Winner</li>
+        <li>2022 FIFA World Cup Winner</li>
+      </ul>
+    </div>
+
+    <div class="stats">
+      <h2>Career Stats</h2>
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Season</th>
+            <th>Club</th>
+            <th>Games Played</th>
+            <th>Goals Scored</th>
+            <th>Assists</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2004-2005</td>
+            <td>FC Barcelona</td>
+            <td>9</td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>2008-2009</td>
+            <td>FC Barcelona</td>
+            <td>51</td>
+            <td>38</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>2011-2012</td>
+            <td>FC Barcelona</td>
+            <td>60</td>
+            <td>73</td>
+            <td>29</td>
+          </tr>
+          <tr>
+            <td>2022-2023</td>
+            <td>Paris Saint-Germain</td>
+            <td>41</td>
+            <td>20</td>
+            <td>20</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="search-container">
+      <input
+        type="text"
+        placeholder="Search Messi's Achievements..."
+        class="search-box"
+      />
+      <button class="search-button">Search</button>
+    </div>
+
+    <div class="quotes-section">
+      <h2>Quotes About Messi</h2>
+      <div class="quotes">
+        <blockquote class="blockquote">
+          <p>
+            "I've seen the player who will inherit my place in Argentine
+            football and his name is Messi."
+          </p>
+          <p>- Diego Maradona</p>
+        </blockquote>
+      </div>
+      <div class="quotes">
+        <blockquote class="blockquote">
+          <p>
+            "Messi is the best player in the world, and I am sure that he will
+            achieve even more in his career."
+          </p>
+          <p>- Ronaldinho</p>
+        </blockquote>
+      </div>
+      <div class="quotes">
+        <blockquote class="blockquote">
+          <p>
+            "For me, to watch Messi play is a pleasure – it's like having an
+            orgasm – it's an incredible pleasure."
+          </p>
+          <p>- Luis Figo</p>
+        </blockquote>
+      </div>
+    </div>
+
+    <div id="quiz" class="quiz-container">
+      <h2 class="quiz-question">
+        Which year did Messi win his first Ballon d'Or?
+      </h2>
+      <ul class="quiz-options">
+        <li data-answer="wrong">2008</li>
+        <li data-answer="correct">2009</li>
+        <li data-answer="wrong">2010</li>
+        <li data-answer="wrong">2011</li>
+      </ul>
+      <div class="quiz-result"></div>
+      <button class="restart-button">Restart Quiz</button>
+    </div>
+
+    <script>
+      const quizOptions = document.querySelectorAll(".quiz-options li");
+      const quizResult = document.querySelector(".quiz-result");
+      const restartButton = document.querySelector(".restart-button");
+
+      quizOptions.forEach((option) => {
+        option.addEventListener("click", () => {
+          if (option.dataset.answer === "correct") {
+            quizResult.textContent =
+              "Correct! Messi won his first Ballon d'Or in 2009.";
+          } else {
+            quizResult.textContent = "Incorrect. Try again!";
+          }
+          quizResult.style.display = "block";
+          restartButton.style.display = "inline-block";
+          quizOptions.forEach((opt) => (opt.style.pointerEvents = "none"));
+        });
+      });
+
+      restartButton.addEventListener("click", () => {
+        quizResult.style.display = "none";
+        restartButton.style.display = "none";
+        quizOptions.forEach((option) => {
+          option.style.pointerEvents = "auto";
+          option.style.backgroundColor = "#444";
+        });
+      });
+    </script>
+  </body>
+</html>

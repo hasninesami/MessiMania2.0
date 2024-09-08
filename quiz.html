@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messi Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Custom quiz page styles */
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #222;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+        color: #ff7e5f;
+        margin-top: 30px;
+      }
+
+      .quiz-container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #333;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .quiz-container h2 {
+        color: #ff7e5f;
+        margin-bottom: 10px;
+      }
+
+      .question {
+        margin-bottom: 20px;
+      }
+
+      .question p {
+        font-size: 1.2rem;
+        color: #ddd;
+        margin-bottom: 10px;
+      }
+
+      .question label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+
+      .submit-btn {
+        background-color: #ff7e5f;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        display: block;
+        margin: 20px auto;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .submit-btn:hover {
+        background-color: #ff9f85;
+        transform: scale(1.05);
+      }
+
+      .results-container {
+        display: none;
+        padding: 20px;
+        background-color: #222;
+        color: #fff;
+        text-align: center;
+      }
+
+      .results-container h2 {
+        color: #ff7e5f;
+      }
+
+      /* Navigation link buttons */
+      nav a {
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 5px;
+        background-color: #ff7e5f;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #ff9f85;
+        transform: scale(1.05);
+      }
+
+      nav {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Test Your Knowledge About Messi</h1>
+
+    <!-- Navigation Links -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="stats.html">Stats</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="about.html">About Messi</a>
+    </nav>
+
+    <div class="quiz-container" id="quizContainer">
+      <!-- Quiz 1 -->
+      <section class="quiz">
+        <h2>Quiz 1: Messi's Early Life</h2>
+        <div class="question">
+          <p>1. Where was Lionel Messi born?</p>
+          <label
+            ><input type="radio" name="q1" value="rosario" /> Rosario, Argentina
+            (Correct)</label
+          >
+          <label
+            ><input type="radio" name="q1" value="buenos" /> Buenos Aires,
+            Argentina</label
+          >
+          <label
+            ><input type="radio" name="q1" value="madrid" /> Madrid,
+            Spain</label
+          >
+        </div>
+
+        <div class="question">
+          <p>2. What was Messi diagnosed with as a child?</p>
+          <label
+            ><input type="radio" name="q2" value="growth" /> Growth hormone
+            deficiency (Correct)</label
+          >
+          <label
+            ><input type="radio" name="q2" value="diabetes" /> Diabetes</label
+          >
+          <label><input type="radio" name="q2" value="asthma" /> Asthma</label>
+        </div>
+
+        <div class="question">
+          <p>
+            3. At what age did Messi move to Spain to join Barcelona’s academy?
+          </p>
+          <label><input type="radio" name="q3" value="12" /> 12</label>
+          <label
+            ><input type="radio" name="q3" value="13" /> 13 (Correct)</label
+          >
+          <label><input type="radio" name="q3" value="14" /> 14</label>
+        </div>
+      </section>
+
+      <!-- Quiz 2 -->
+      <section class="quiz">
+        <h2>Quiz 2: Messi's Career</h2>
+        <div class="question">
+          <p>1. How many Ballon d'Or titles has Messi won?</p>
+          <label><input type="radio" name="q4" value="5" /> 5</label>
+          <label><input type="radio" name="q4" value="7" /> 7 (Correct)</label>
+          <label><input type="radio" name="q4" value="9" /> 9</label>
+        </div>
+
+        <div class="question">
+          <p>2. What year did Messi score 91 goals in a calendar year?</p>
+          <label><input type="radio" name="q5" value="2010" /> 2010</label>
+          <label
+            ><input type="radio" name="q5" value="2012" /> 2012 (Correct)</label
+          >
+          <label><input type="radio" name="q5" value="2014" /> 2014</label>
+        </div>
+
+        <div class="question">
+          <p>
+            3. Against which team did Messi score his famous solo goal in 2007?
+          </p>
+          <label
+            ><input type="radio" name="q6" value="getafe" /> Getafe
+            (Correct)</label
+          >
+          <label
+            ><input type="radio" name="q6" value="real" /> Real Madrid</label
+          >
+          <label
+            ><input type="radio" name="q6" value="chelsea" /> Chelsea</label
+          >
+        </div>
+      </section>
+
+      <!-- Quiz 3 -->
+      <section class="quiz">
+        <h2>Quiz 3: Messi's International Career</h2>
+        <div class="question">
+          <p>
+            1. In what year did Messi win his first major international trophy
+            with Argentina?
+          </p>
+          <label><input type="radio" name="q7" value="2014" /> 2014</label>
+          <label
+            ><input type="radio" name="q7" value="2021" /> 2021 (Correct)</label
+          >
+          <label><input type="radio" name="q7" value="2022" /> 2022</label>
+        </div>
+
+        <div class="question">
+          <p>2. Which tournament did Messi win with Argentina in 2021?</p>
+          <label
+            ><input type="radio" name="q8" value="wc" /> FIFA World Cup</label
+          >
+          <label
+            ><input type="radio" name="q8" value="ca" /> Copa América
+            (Correct)</label
+          >
+          <label
+            ><input type="radio" name="q8" value="ucl" /> UEFA Champions
+            League</label
+          >
+        </div>
+
+        <div class="question">
+          <p>3. How many goals did Messi score in the 2022 FIFA World Cup?</p>
+          <label><input type="radio" name="q9" value="5" /> 5</label>
+          <label><input type="radio" name="q9" value="7" /> 7 (Correct)</label>
+          <label><input type="radio" name="q9" value="8" /> 8</label>
+        </div>
+      </section>
+
+      <button class="submit-btn" onclick="showResults()">Submit Answers</button>
+    </div>
+
+    <!-- Results Section -->
+    <div class="results-container" id="resultsContainer">
+      <h2>Quiz Results</h2>
+      <p>You have finished the quiz! Here are the correct answers:</p>
+      <ul>
+        <li>
+          <strong>Quiz 1:</strong> Rosario, Argentina; Growth hormone
+          deficiency; Age 13.
+        </li>
+        <li>
+          <strong>Quiz 2:</strong> 7 Ballon d'Or titles; 2012 for 91 goals;
+          Famous solo goal against Getafe.
+        </li>
+        <li>
+          <strong>Quiz 3:</strong> First major international trophy in 2021;
+          Copa América; 7 goals in the 2022 World Cup.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Messi Fan Club. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      function showResults() {
+        const quizContainer = document.getElementById("quizContainer");
+        const resultsContainer = document.getElementById("resultsContainer");
+
+        quizContainer.style.display = "none";
+        resultsContainer.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
